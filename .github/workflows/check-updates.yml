@@ -1,0 +1,32 @@
+name: Check Kernel and Bcachefs Updates
+
+on:
+  schedule:
+    - cron: '0 */2 * * *'  # everyday every two hours
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Fetch latest Linux kernel tag
+      id: kernel
+      run: |
+        tag=$(git ls-remote --tags https://github.com/torvalds/linux.git | grep -o 'refs/tags/v[0-9.]*$' | sort -V | tail -n1 | awk -F/ '{print $3}')
+        echo "LATEST_TAG=$tag" >> $GITHUB_OUTPUT
+        echo "$tag" > linux-tag.txt
+
+    - name: Fetch latest bcachefs commit
+      id: bcachefs
+      run: |
+        commit=$(git ls-remote https://evilpiepirate.org/git/bcachefs.git refs/heads/master | cut -f1)
+        echo "LATEST_COMMIT=$commit" >> $GITHUB_OUTPUT
+        echo "$commit" > bcachefs-commit.txt
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: kernel-update-info
+        path: |
+          linux-tag.txt
+          bcachefs-commit.txt
