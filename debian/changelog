@@ -1,8 +1,8 @@
-proxmox-kernel-6.16 (6.16.0-6) bookworm; urgency=medium
-  * Updated sources to Vanilla 6.16-rc6
-  * Updated bcachefs to c1ec91699f6089754548cfc01391fff17a633516
+proxmox-kernel-6.16 (6.16.0-7) bookworm; urgency=medium
+  * Updated sources to Vanilla 6.16-rc7
+  * Updated bcachefs to 59cc97914b0e8d59c0fbb1b5d44d0054a2ddbd8d
 
- -- Krzysztof Hajdamowicz <krzysztof@hajdamowicz.info>  Mon, 19 Jul 2025 18:10:52 +0000
+ -- Krzysztof Hajdamowicz <krzysztof@hajdamowicz.info>  Wed, 23 Jul 2025 14:16:52 +0000
 
 proxmox-kernel-6.13 (6.13.0-1) bookworm; urgency=medium
 
