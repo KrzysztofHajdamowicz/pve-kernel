@@ -1,2 +1,5 @@
 ubuntu-zesty
 *.prepared
+*.deb
+proxmox-kernel-*
+patches/kernel.bak/

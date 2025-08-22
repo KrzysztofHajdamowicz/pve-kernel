@@ -1,9 +1,10 @@
-proxmox-kernel-6.16 (6.16.0-51) trixie; urgency=medium
+proxmox-kernel-6.16 (6.16.0-64) trixie; urgency=medium
   * Updated sources to Vanilla 6.16
-  * Updated bcachefs to 74718cecba331a8ae4b9bda519f49ebc1d4f568c
+  * Updated bcachefs to bcachefs-testing
+    2cc3a7e4d7532efae122b7bde9e1276cad90d621
   * Enabled CONFIG_BCACHEFS_DEBUG to enable new asserts
 
- -- Krzysztof Hajdamowicz <krzysztof@hajdamowicz.info>  Sat, 06 Aug 2025 22:34:52 +0000
+ -- Krzysztof Hajdamowicz <krzysztof@hajdamowicz.info>  Fri, 22 Aug 2025 08:25:52 +0000
 
 proxmox-kernel-6.13 (6.13.0-1) bookworm; urgency=medium
 

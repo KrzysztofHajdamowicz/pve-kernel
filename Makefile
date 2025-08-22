@@ -6,7 +6,7 @@ KERNEL_MIN=16
 KERNEL_PATCHLEVEL=0
 # increment KREL for every published package release!
 # rebuild packages with new KREL and run 'make abiupdate'
-KREL=51
+KREL=64
 
 KERNEL_MAJMIN=$(KERNEL_MAJ).$(KERNEL_MIN)
 KERNEL_VER=$(KERNEL_MAJMIN).$(KERNEL_PATCHLEVEL)
@@ -170,3 +170,4 @@ abi-tmp-$(KVNAME):
 clean:
 	rm -rf *~ proxmox-kernel-[0-9]*/ *.prepared $(KERNEL_CFG_ORG)
 	rm -f *.deb *.dsc *.changes *.buildinfo *.build proxmox-kernel*.tar.*
+
